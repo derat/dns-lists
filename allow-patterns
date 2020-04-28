@@ -1,1 +1,3 @@
+# r20.rs6.net (belonging to Constant Contact) is a link redirector frequently
+# used in email newsletters.
 (^|\.)rs6\.net$
