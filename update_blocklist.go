@@ -54,20 +54,24 @@ func main() {
 
 	// Use log.Panic/Panicf from here on to run deferred functions.
 	fmt.Fprintf(fw, "# Written on %s\n", time.Now().Format(time.RFC1123))
+	fmt.Fprintf(fw, "server:\n")
+
 	for _, url := range denyHostsURLs {
 		fmt.Fprintf(fw, "\n# %s\n", url)
 		if err := writeZones(fw, url, allowPats); err != nil {
 			log.Panicf("Failed to write zones from %v: %v", url, err)
 		}
 	}
+
+	if len(*dryRun) == 0 {
+		if err := runCmd("unbound-checkconf", fw.tempName()); err != nil {
+			log.Panic("Failed to check config: ", err)
+		}
+	}
 	if err := fw.finish(); err != nil {
 		log.Panic("Failed to finish file: ", err)
 	}
-
 	if len(*dryRun) == 0 {
-		if err := runCmd("unbound-checkconf", destPath); err != nil {
-			log.Panic("Failed to check config: ", err)
-		}
 		if err := runCmd("service", "unbound", "restart"); err != nil {
 			log.Panic("Failed to restart unbound service: ", err)
 		}
@@ -186,6 +190,11 @@ func (fw *fileWriter) Write(p []byte) (n int, err error) {
 		_, fw.err = fw.f.Write(p)
 	}
 	return len(p), nil // swallow errors
+}
+
+// tempName returns the path of the temporary file.
+func (fw *fileWriter) tempName() string {
+	return fw.f.Name()
 }
 
 // finish closes the temp file and renames it to the original path.
