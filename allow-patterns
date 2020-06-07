@@ -1,4 +1,7 @@
 # r20.rs6.net (belonging to Constant Contact) is a link redirector frequently
 # used in email newsletters.
 (^|\.)rs6\.net$
+# ads.google.com is used to manage Google AdWords accounts.
 ^ads\.google\.com$
+# trackcmp.net seems to be a link redirector used by email newsletters.
+^trackcmp\.net$
