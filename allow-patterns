@@ -3,5 +3,7 @@
 (^|\.)rs6\.net$
 # ads.google.com is used to manage Google AdWords accounts.
 ^ads\.google\.com$
+# click.pstmrk.it is a link redirector used in email messages.
+^pstmrk\.it$
 # trackcmp.net seems to be a link redirector used by email newsletters.
 ^trackcmp\.net$
