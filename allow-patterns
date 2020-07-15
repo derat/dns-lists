@@ -5,6 +5,8 @@
 ^ads\.google\.com$
 # analytics.google.com is used to view analytics tracked by Google Analytics.
 ^analytics\.google\.com$
+# Unblocking mixpanel.com so its blog posts can be accessed.
+^mixpanel\.com$
 # click.pstmrk.it is a link redirector used in email messages.
 ^pstmrk\.it$
 # trackcmp.net seems to be a link redirector used by email newsletters.
