@@ -24,8 +24,11 @@ fi
 tmpdir=$(mktemp -d --tmpdir update_blocklist.XXXXXX)
 [ -z "$dryrun" ] && trap "rm -r '$tmpdir'" EXIT
 
+# We can safely drop everything after '#' since it isn't allowed in domain names.
 allow="${tmpdir}/allow"
-wget --quiet -O- "$ALLOW_URL" | grep -v '^#' | grep -v '^$' >"${allow}"
+wget --quiet -O- "$ALLOW_URL" | \
+  sed -e 's/#.*//' | sed -e 's/^\s*//' | sed -e 's/\s*$//' | \
+  grep -v '^$' >"${allow}"
 
 # The 'server:' directive here is required.
 out="${tmpdir}/out"

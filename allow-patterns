@@ -1,15 +1,6 @@
-# r20.rs6.net (belonging to Constant Contact) is a link redirector frequently
-# used in email newsletters.
-(^|\.)rs6\.net$
-# ads.google.com is used to manage Google AdWords accounts.
-^ads\.google\.com$
-# analytics.google.com is used to view analytics tracked by Google Analytics.
-^analytics\.google\.com$
-# click.pstmrk.it is a link redirector used in email messages.
-^pstmrk\.it$
-# trackcmp.net seems to be a link redirector used by email newsletters.
-^trackcmp\.net$
+^pstmrk\.it$              # redirector (click.pstmrk.it)
+(^|\.)rs6\.net$           # redirector (r20.rs6.net - Constant Contact)
+^trackcmp\.net$           # redirector
 
-# Temporarily unblocking some main pages and blogs.
-^amplitude\.com$
-^mixpanel\.com$
+^ads\.google\.com$        # manage Google AdWords accounts
+^analytics\.google\.com$  # view analytics tracked by Google Analytics
