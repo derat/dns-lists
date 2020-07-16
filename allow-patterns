@@ -4,3 +4,6 @@
 
 ^ads\.google\.com$        # manage Google AdWords accounts
 ^analytics\.google\.com$  # view analytics tracked by Google Analytics
+
+^app-measurement\.com$    # Firebase app metrics
+(^|\.)crashlytics\.com$   # Google crash reporting
