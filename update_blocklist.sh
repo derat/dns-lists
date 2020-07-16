@@ -25,7 +25,7 @@ tmpdir=$(mktemp -d --tmpdir update_blocklist.XXXXXX)
 [ -z "$dryrun" ] && trap "rm -r '$tmpdir'" EXIT
 
 allow="${tmpdir}/allow"
-wget --quiet -O- "$ALLOW_URL" | grep -v '^#' >"${allow}"
+wget --quiet -O- "$ALLOW_URL" | grep -v '^#' | grep -v '^$' >"${allow}"
 
 # The 'server:' directive here is required.
 out="${tmpdir}/out"
