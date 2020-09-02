@@ -1,9 +1,9 @@
-(^|\.)jdoqocy\.com$       # redirector (credit card rewards)
 ^pstmrk\.it$              # redirector (click.pstmrk.it)
 (^|\.)rs6\.net$           # redirector (r20.rs6.net - Constant Contact)
 ^trackcmp\.net$           # redirector
 
 ^ads\.google\.com$        # manage Google AdWords accounts
 ^analytics\.google\.com$  # view analytics tracked by Google Analytics
+
 ^app-measurement\.com$    # Firebase app metrics
 (^|\.)crashlytics\.com$   # Google crash reporting
