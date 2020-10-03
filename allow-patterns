@@ -8,4 +8,5 @@
 
 ^app-measurement\.com$        # Firebase app metrics
 (^|\.)crashlytics\.com$       # Google crash reporting
+(^|\.)google-analytics\.com$  # Google Analytics
 (^|\.)googletagmanager\.com$  # Google Analytics
