@@ -1,4 +1,5 @@
 ^app\.getresponse\.com$       # redirector
+^klclick1\.com$               # redirector (trk.klclick1.com)
 ^pstmrk\.it$                  # redirector (click.pstmrk.it)
 (^|\.)rs6\.net$               # redirector (r20.rs6.net - Constant Contact)
 ^trackcmp\.net$               # redirector
