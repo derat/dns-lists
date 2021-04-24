@@ -17,3 +17,5 @@
 (^|\.)googletagmanager\.com$            # Google Analytics
 ^www-googletagmanager\.l\.google\.com$  # Google Analytics
 ^www-google-analytics\.l\.google\.com$  # Google Analytics
+
+^static\.cloudflare-insights\.com$  # Cloudflare Analytics
